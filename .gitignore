@@ -1,0 +1,13 @@
+.idea/
+*.iml
+*.xml
+
+cmake-build-*/
+bin/
+*.o
+*.exe
+*.dylib
+*.so
+
+.DS_Store
+Thumbs.db
