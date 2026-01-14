@@ -5,7 +5,14 @@ set(CMAKE_C_STANDARD 99)
 
 include_directories(include)
 
-add_executable(sea src/main.c)
+set(SOURCES
+        src/main.c
+        src/server.c
+        src/http.c
+        src/file.c
+)
+
+add_executable(sea ${SOURCES})
 
 # 스레드 라이브러리 연결 (Linux/Mac)
 find_package(Threads REQUIRED)
