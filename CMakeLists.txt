@@ -7,6 +7,11 @@ include_directories(include)
 
 add_executable(sea src/main.c)
 
+# 스레드 라이브러리 연결 (Linux/Mac)
+find_package(Threads REQUIRED)
+target_link_libraries(sea Threads::Threads)
+
+# 소켓 라이브러리 연결 (Windows)
 if (WIN32)
     target_link_libraries(sea ws2_32)
 endif ()
